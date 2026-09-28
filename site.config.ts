@@ -10,11 +10,11 @@ export default siteConfig({
 
   // basic site info (required)
   name: "WUKAIPENG's WIKI",
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
+  domain: 'wukaipeng.vercel.app',
   author: 'WUKAIPENG',
 
   // open graph metadata (optional)
-  description: 'Collect Bugs',
+  description: 'Collect Tools, Bugs and Thoughts',
 
   // social usernames (optional)
   twitter: 'x_wukaipeng',
@@ -50,8 +50,8 @@ export default siteConfig({
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
+  // navigationStyle: 'default'
+  navigationStyle: 'custom'
   // navigationLinks: [
   //   {
   //     title: 'About',

@@ -24,9 +24,9 @@ import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import { Footer } from './Footer'
-import { GitHubShareButton } from './GitHubShareButton'
+// import { GitHubShareButton } from './GitHubShareButton'
 import { NotionPageHeader } from './NotionPageHeader'
-import { PageAside } from './PageAside'
+// import { PageAside } from './PageAside'
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -221,12 +221,12 @@ export function NotionPage({
   const showTableOfContents = !!isBlogPost
   const minTableOfContentsItems = 3
 
-  const pageAside = React.useMemo(
-    () => (
-      <PageAside block={block!} recordMap={recordMap} isBlogPost={isBlogPost} />
-    ),
-    [block, recordMap, isBlogPost]
-  )
+  // const pageAside = React.useMemo(
+  //   () => (
+  //     <PageAside block={block!} recordMap={recordMap} isBlogPost={isBlogPost} />
+  //   ),
+  //   [block, recordMap, isBlogPost]
+  // )
 
   const title = getBlockTitle(block, recordMap) || site.name
 
@@ -268,11 +268,11 @@ export function NotionPage({
         mapPageUrl={siteMapPageUrl}
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : undefined}
-        pageAside={pageAside}
+        // pageAside={pageAside}
         footer={<Footer />}
       />
 
-      <GitHubShareButton />
+      {/* <GitHubShareButton /> */}
     </>
   )
 }

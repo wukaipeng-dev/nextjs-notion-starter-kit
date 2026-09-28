@@ -5,7 +5,7 @@
   "description": "The perfect starter kit for building beautiful websites with Next.js and Notion.",
   "license": "MIT",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
-  "repository": "transitive-bullshit/nextjs-notion-starter-kit",
+  "repository": "https://github.com/wukaipeng-dev/nextjs-notion-starter-kit",
   "type": "module",
   "scripts": {
     "dev": "next dev",

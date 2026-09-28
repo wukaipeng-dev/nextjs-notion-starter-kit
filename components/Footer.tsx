@@ -3,24 +3,24 @@ import * as React from 'react'
 import * as config from '@/lib/config'
 import { GitHubIcon } from '@/lib/icons/github'
 import { LinkedInIcon } from '@/lib/icons/linkedin'
-import { MoonIcon } from '@/lib/icons/moon'
-import { SunIcon } from '@/lib/icons/sun'
+// import { MoonIcon } from '@/lib/icons/moon'
+// import { SunIcon } from '@/lib/icons/sun'
 import { TwitterIcon } from '@/lib/icons/twitter'
-import { useDarkMode } from '@/lib/use-dark-mode'
+// import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
 
 export function FooterImpl() {
-  const { hasMounted, isDarkMode, toggleDarkMode } = useDarkMode()
+  // const { hasMounted, isDarkMode, toggleDarkMode } = useDarkMode()
   const currentYear = new Date().getFullYear()
 
-  const onToggleDarkMode = React.useCallback(
-    (e: any) => {
-      e.preventDefault()
-      toggleDarkMode()
-    },
-    [toggleDarkMode]
-  )
+  // const onToggleDarkMode = React.useCallback(
+  //   (e: any) => {
+  //     e.preventDefault()
+  //     toggleDarkMode()
+  //   },
+  //   [toggleDarkMode]
+  // )
 
   return (
     <footer className={styles.footer}>
@@ -28,7 +28,7 @@ export function FooterImpl() {
         Copyright {currentYear} {config.author}
       </div>
 
-      <div className={styles.settings}>
+      {/* <div className={styles.settings}>
         {hasMounted && (
           <a
             className={styles.toggleDarkMode}
@@ -40,7 +40,7 @@ export function FooterImpl() {
             {isDarkMode ? <MoonIcon /> : <SunIcon />}
           </a>
         )}
-      </div>
+      </div> */}
 
       <div className={styles.social}>
         {config.twitter && (
