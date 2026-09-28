@@ -19,6 +19,7 @@ import * as config from '@/lib/config'
 import { Providers } from './providers'
 
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   metadataBase: new URL(config.host),
@@ -87,8 +88,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang='en' suppressHydrationWarning>
       <body>
         <Providers>{children}</Providers>
-        <SpeedInsights />
       </body>
+      <SpeedInsights />
+      <Analytics />
     </html>
   )
 }
