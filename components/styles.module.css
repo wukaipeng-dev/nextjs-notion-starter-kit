@@ -225,3 +225,20 @@
 .hidden {
   visibility: hidden;
 }
+
+.navLhs {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 0.75em;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+}

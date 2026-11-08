@@ -1,5 +1,6 @@
 import type * as types from 'notion-types'
 import cs from 'classnames'
+import Image from 'next/image'
 import * as React from 'react'
 import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 
@@ -9,6 +10,26 @@ import { SunIcon } from '@/lib/icons/sun'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
+
+function Logo() {
+  const { hasMounted, isDarkMode } = useDarkMode()
+
+  // Avoid hydration mismatch by not rendering until mounted
+  if (!hasMounted) return null
+
+  return (
+    <div className={styles.logo}>
+      <Image
+        src={isDarkMode ? '/Logokp-logo-v1-dark.png' : '/Logokp-logo-v3.png'}
+        alt='Logo'
+        width={35}
+        height={35}
+        style={{ objectFit: 'contain' }}
+        priority
+      />
+    </div>
+  )
+}
 
 function ToggleThemeButton() {
   const { hasMounted, isDarkMode, toggleDarkMode } = useDarkMode()
@@ -41,7 +62,10 @@ export function NotionPageHeader({
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <Breadcrumbs block={block} rootOnly={true} />
+        <div className={styles.navLhs}>
+          <Logo />
+          <Breadcrumbs block={block} rootOnly={true} />
+        </div>
 
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks

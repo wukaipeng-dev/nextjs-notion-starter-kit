@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
     icon: [
       {
-        url: '/favicon.png',
+        url: '/Logokp-logo-v3.png',
         type: 'image/png',
         sizes: '32x32'
       }
